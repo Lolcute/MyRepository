@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    tools:context="com_picker_dialog.moliying.cache_picture.MainActivity">
+
+    <ImageView
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView" />
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_below="@+id/imageView"
+        android:id="@+id/draweeView"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        fresco:fadeDuration="300"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:placeholderImageScaleType="fitCenter"
+        fresco:failureImage="@mipmap/ic_launcher"
+        fresco:failureImageScaleType="centerInside"
+        fresco:retryImageScaleType="centerCrop"
+        fresco:progressBarImageScaleType="centerInside"
+        fresco:progressBarAutoRotateInterval="1000"
+        fresco:backgroundImage="@color/colorAccent"
+        fresco:pressedStateOverlayImage="@color/colorPrimary"
+        fresco:roundAsCircle="false"
+        fresco:roundedCornerRadius="10dp"
+        fresco:roundTopLeft="true"
+        fresco:roundTopRight="false"
+        fresco:roundBottomLeft="false"
+        fresco:roundBottomRight="true"
+        fresco:roundingBorderWidth="2dp"
+        fresco:placeholderImage="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:onClick="load_pic"
+            android:text="加载图片_ImageLoader"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/button1" />
+        <Button
+            android:onClick="load_pic_picasso"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="加载图片_picasso"
+            android:id="@+id/button2"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:onClick="load_pic_glide"
+            android:text="加载图片_glide"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/button3" />
+        <Button
+            android:onClick="load_pic_fresco"
+            android:text="加载图片_Fresco"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/button4" />
+    </LinearLayout>
+
+
+</RelativeLayout>
